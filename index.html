@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navbar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: blueviolet;
+        padding: 20px;
+      }
+
+      /* Logo styles */
+      .navbar .logo {
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+      }
+
+      /* Navbar list styles */
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* List item styles */
+      .navbar ul li {
+        margin-left: 20px;
+      }
+
+      /* Link styles */
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 18px;
+      }
+
+      /* Link hover effect */
+      .navbar ul li a:hover {
+        background-color: hsl(212, 42%, 15%);
+        
+      }
+
+      /* Hidden checkbox */
+      #menu-toggle {
+        display: none;
+      }
+
+      /* Label for the menu icon */
+      .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+      }
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .section {
+        padding: 60px 20px;
+        background-color: lightgray;
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      .section:hover {
+        background-color: aqua;
+        color: red;
+      }
+      /* Responsive styles for smaller screens */
+      @media (max-width: 858px) {
+        .navbar ul {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: blueviolet;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          z-index: 999;
+        }
+
+        .menu-icon {
+          display: block;
+        }
+
+        .navbar ul li {
+          margin: 10px 0;
+          
+        }
+
+        .navbar ul li a {
+          margin-top: 30px;
+          text-align: center;
+          display: block;
+
+        }
+
+        #menu-toggle:checked + .menu-icon + ul {
+          display: flex;
+          
+        }
+        .section:hover {
+          background-color: brown;
+          color: white;
+        }
+      }
+    </style>
+ 
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+
+      <title>Responsive card slider - Bedimcode</title>
+   </head>
+   <body>
+
+    <nav class="navbar" style="background-color:  hsl(195, 75%, 52%);">
+      <a href="#" class="logo">MyLogo</a>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- <div class="content">
+      <div id="home" class="section">
+        <h2>Home</h2>
+        <p>Welcome to our website!</p>
+      </div>
+      <div id="services" class="section">
+        <h2>Services</h2>
+        <p>We offer a variety of services.</p>
+      </div>
+      <div id="about" class="section">
+        <h2>About</h2>
+        <p>Learn more about us.</p>
+      </div>
+      <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Get in touch with us.</p>
+      </div>
+    </div> -->
+
+
+
+      <section class="container">
+         <div class="card__container swiper">
+            <div class="card__content">
+               <div class="swiper-wrapper">
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="assets/img/avatar-1.png" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Kell Dawx</h3>
+                        <p class="card__description">
+                           Passionate about development and design, 
+                           I carry out projects at the request of users.
+                        </p>
+      
+                        <a href="#" class="card__button">View More</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="assets/img/avatar-2.png" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Lotw Fox</h3>
+                        <p class="card__description">
+                           Passionate about development and design, 
+                           I carry out projects at the request of users.
+                        </p>
+      
+                        <a href="#" class="card__button">View More</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="assets/img/avatar-3.png" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Sara Mit</h3>
+                        <p class="card__description">
+                           Passionate about development and design, 
+                           I carry out projects at the request of users.
+                        </p>
+      
+                        <a href="#" class="card__button">View More</a>
+                     </div>
+                  </article>
+      
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="assets/img/avatar-4.png" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Jenny Wert</h3>
+                        <p class="card__description">
+                           Passionate about development and design, 
+                           I carry out projects at the request of users.
+                        </p>
+      
+                        <a href="#" class="card__button">View More</a>
+                     </div>
+                  </article>
+
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="assets/img/avatar-5.png" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                     </div>
+      
+                     <div class="card__data">
+                        <h3 class="card__name">Lexa Kin</h3>
+                        <p class="card__description">
+                           Passionate about development and design, 
+                           I carry out projects at the request of users.
+                        </p>
+      
+                        <a href="#" class="card__button">View More</a>
+                     </div>
+                  </article>
+               </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+               <i class="ri-arrow-right-s-line"></i>
+            </div>
+            
+            <div class="swiper-button-prev">
+               <i class="ri-arrow-left-s-line"></i>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+         </div>
+      </section>
+      
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
